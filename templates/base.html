@@ -4,24 +4,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
 
-    <title>Andrew Liu Blog</title>
+
+    <title>{% block title %}Thunderlbc Blog{% endblock %}</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
+{#    <link href="http://ontheroad.qiniudn.com/blog/static/css/code.css" rel="stylesheet" type="text/css"/>#}
+    <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
+{#    <link type="text/css" rel="stylesheet" href="{{ STATIC_DIRS }}friendly.css">#}
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 </head>
 <body>
 <div id="layout" class="pure-g">
     <div class="sidebar pure-u-1 pure-u-md-1-4">
         <div class="header">
-            <h1 class="brand-title">Andrew Liu Blog</h1>
-            <h2 class="brand-tagline">雪忆 - Snow Memory</h2>
+            <h1 class="brand-title"><a href="{% url 'home' %}">Thr_lbc Blog</a></h1>
+            <h2 class="brand-tagline">蓝海星辰 - lanhaixingchen</h2>
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a class="pure-button" href="https://github.com/Andrew-liu">Github</a>
+                        <a class="button-success pure-button" href="/">主页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="pure-button" href="http://weibo.com/dinosaurliu">Weibo</a>
+                        <a class="button-success pure-button" href="/">归档</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="https://github.com/Thunderlbc">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-error pure-button" href="http://weibo.com/u/1710122552">Weibo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/">专题</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/">About Me</a>
                     </li>
                 </ul>
             </nav>
@@ -35,9 +52,8 @@
             <div class="footer">
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>
-                        <li><a href="http://andrewliu.tk/about/">About Me</a></li>
-                        <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
-                        <li><a href="http://github.com/yahoo/pure/">GitHub</a></li>
+                        <li><a href="http://libingchen.me/about/">About Me</a></li>
+                        <li><a href="http://github.com/yahoo/pure/">Pure Project GitHub Page</a></li>
                     </ul>
                 </div>
             </div>
